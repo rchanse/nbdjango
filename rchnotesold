@@ -1,0 +1,102 @@
+Thu 17 Jan 2019 11:17:22 AM CST   (a starting over set of notes)
+Create and load  nbdjango  dir 
+orig-newboston  -- original code directory
+rchdj           -- where my work will go (at this time same as orig
+rchnbdjold      -- my last attempt at the tutorial see rchnotesold
+rchnotes
+Readme
+Readme~
+tf
+
+Tue 01 Jan 2019 05:23:45 PM CST
+create  cdit  rchnbdjj   to get here this dir  ~/nbdjango/rchnbdj
+create  nbdjnotes to get to this file
+
+tutorial 1  insure you have  easy_install and pip
+easy_install --version     gives
+setuptools 20.7.0 from /usr/lib/python2.7/dist-packages (Python 2.7)
+
+pip --version      gives
+pip 18.1 from /home/rchansen/.local/lib/python2.7/site-packages/pip (python 2.7)
+
+download django    sudo pip django
+   check it by  django-admin --version   ==>>  1.11.7
+
+tutorial 2
+sitting in  dir  ~/nbdjango/rchnbdj
+
+create a project name website   django-admin startproject website
+
+new directory website  (the project name)
+ls -alR website
+
+website:
+total 16
+drwxrwxr-x 3 rchansen rchansen 4096 Jan  1 21:16 .
+drwxrwxr-x 6 rchansen rchansen 4096 Jan  1 21:32 ..
+-rwxr-xr-x 1 rchansen rchansen  805 Jan  1 21:16 manage.py    
+ # the 'command' processor front end
+drwxrwxr-x 2 rchansen rchansen 4096 Jan  1 21:16 website
+ # anchor sub directory
+website/website:
+total 20
+drwxrwxr-x 2 rchansen rchansen 4096 Jan  1 21:16 .
+drwxrwxr-x 3 rchansen rchansen 4096 Jan  1 21:16 ..
+-rw-r--r-- 1 rchansen rchansen    0 Jan  1 21:16 __init__.py
+ # indicates  a python package
+-rw-r--r-- 1 rchansen rchansen 3100 Jan  1 21:16 settings.py
+ # the 'config file' more as will be needed
+-rw-r--r-- 1 rchansen rchansen  764 Jan  1 21:16 urls.py
+ #  'table of contents of web pages'   also  url and actions to take
+-rw-r--r-- 1 rchansen rchansen  392 Jan  1 21:16 wsgi.py
+ #  web server gateway interface
+
+ you've a 'baby' webserver -- in website-dir (~/nbdjango/rchnbdj/website
+ issue  python manage.py runserver         a browser  url  127.0.0.1:8000
+
+tutorial 3 create first app (plus a rant about what is an app - here an app
+there an app   everywhere an app app
+
+python manage.py startapp music
+creates website/music subdir
+ ls -alR music
+music:
+total 32
+drwxrwxr-x 3 rchansen rchansen 4096 Jan  1 23:27 .
+drwxrwxr-x 4 rchansen rchansen 4096 Jan  1 23:34 ..
+-rw-r--r-- 1 rchansen rchansen  128 Jan  1 23:27 admin.py     admin function
+-rw-r--r-- 1 rchansen rchansen  150 Jan  1 23:27 apps.py      config file
+-rw-r--r-- 1 rchansen rchansen    0 Jan  1 23:27 __init__.py  a py package
+drwxrwxr-x 2 rchansen rchansen 4096 Jan  1 23:27 migrations  how to hook up
+-rw-r--r-- 1 rchansen rchansen  122 Jan  1 23:27 models.py    db blueprint
+-rw-r--r-- 1 rchansen rchansen  125 Jan  1 23:27 tests.py     your tests
+-rw-r--r-- 1 rchansen rchansen  128 Jan  1 23:27 views.py     python funct
+
+music/migrations:
+total 8
+drwxrwxr-x 2 rchansen rchansen 4096 Jan  1 23:27 .
+drwxrwxr-x 3 rchansen rchansen 4096 Jan  1 23:27 ..
+-rw-r--r-- 1 rchansen rchansen    0 Jan  1 23:27 __init__.py   
+
+tutorial 4 over view a a basic app
+migration - hook up you db and stuff
+
+tutorial 5
+
+
+tutorial 6 DB setup  --   website/website/db.slite3
+ default  see  settings   DATABASES
+  Note errors/warnings on  python manage.py runserver
+  fix migration errors/warnings   
+    python manage.py migrate
+
+tutorial 7 creating Models
+
+tutorial 8 activating Models
+ 1. make the change to the  models.py
+ 2. python manage.py makemigrations xxx
+ 3. python manage.py migrate
+
+tutorial 9  Database API
+:w
+

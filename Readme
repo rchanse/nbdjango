@@ -1,0 +1,6 @@
+Tue 01 Jan 2019 05:02:43 PM CST
+Bucky tutorial on YouTube    NewBoston    got this from
+git clone https://github.com/samakshjain/thenewboston-django.git
+
+first clone get mv thenewboston orig-newboston
+second clone get mv thenewboston rchnbjd     rch-newboston-django

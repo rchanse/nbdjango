@@ -1,0 +1,221 @@
+Thu 17 Jan 2019 11:17:22 AM CST   (a starting over set of notes)
+https://www.youtube.com/watch?v=qgGIqRFvFFk&list=PL6gx4Cwl9DGBlmzzFcLgDhKTTfNLfX1IK&index=://www.youtube.com/watch?v=qgGIqRFvFFk&list=PL6gx4Cwl9DGBlmzzFcLgDhKTTfNLfX1IK&index=1
+Create and load  nbdjango  dir 
+
+djf             -- wrapper for tf (put in ~/bintest)
+orig-newboston  -- original code directory
+rchdj           -- where my work will go (at this time same as orig
+rchnbdjold      -- my last attempt at the tutorial see rchnotesold
+rchnotes        -- my notes comment on this tutorial
+rchnotesold     -- notes during my first attemp at this tutorial
+Readme          -- getting this tutorial from github	
+tf              -- my special f  for this work  djf - wrapper in bintest
+
+--- copy of Readme
+
+Tue 01 Jan 2019 05:02:43 PM CST
+Bucky tutorial on YouTube    NewBoston    got this from
+git clone https://github.com/samakshjain/thenewboston-django.git
+
+first clone get mv thenewboston orig-newboston
+second clone get mv thenewboston rchnbjd     rch-newboston-django
+
+--- end of copy of Readme 
+
+To get to these notes    djf notes
+
+upgrad djf so  you can pass   acro  file/name  sudo   in the list
+
+set   cdit nbdj   ~/nbdjango
+set   cdit rchdj  ~/nbdjango/rchdj
+
+
+tutorial 1  insure you have  easy_install and pip
+easy_install --version     gives
+setuptools 20.7.0 from /usr/lib/python2.7/dist-packages (Python 2.7)
+
+pip --version      gives
+pip 18.1 from /home/rchansen/.local/lib/python2.7/site-packages/pip (python 2.7)
+
+download django    sudo pip install django
+   check it by  django-admin --version   ==>>  1.11.7
+
+tutorial 2
+sitting in  dir  ~/nbdjango/
+  << create project >>
+create a project name website   django-admin startproject website
+  this will create subdirectory website   contains start file
+  since we are in ~/nbdjango    we now have ~/nbdjango/website  ...
+new directory website  (the project name)
+ls -alR website
+ 
+website:
+total 16
+drwxr-xr-x 3 root     root     4096 Jan 17 22:29 .
+drwxrwxr-x 5 rchansen rchansen 4096 Jan 17 22:29 ..
+-rwxr-xr-x 1 root     root      805 Jan 17 22:29 manage.py
+drwxr-xr-x 2 root     root     4096 Jan 17 22:29 website
+
+website/website:
+total 20
+drwxr-xr-x 2 root root 4096 Jan 17 22:29 .
+drwxr-xr-x 3 root root 4096 Jan 17 22:29 ..
+-rw-r--r-- 1 root root    0 Jan 17 22:29 __init__.py   # denotes a package
+-rw-r--r-- 1 root root 3100 Jan 17 22:29 settings.py   # config
+-rw-r--r-- 1 root root  764 Jan 17 22:29 urls.py       # url declarations
+       most often a webpage  sometime a function/action
+-rw-r--r-- 1 root root  392 Jan 17 22:29 wsgi.py   # webserver gateway if
+
+ django-admin startproject proj
+structure
+  djrootdir   issue  django-admin startproject projname
+  |--projname
+     |--.
+     |--..
+     |--manage.py
+     |--projname
+        |--.
+	|--..
+        |--__init__.py
+	|--settings.py
+	|--urls.py
+	|--wsg1.py
+--------------------------------------------------------------
+you've a 'baby' webserver -- in website-dir (~/nbdjango/rchnbda  j/website
+ issue  sudo python manage.py runserver   
+   then use a browser  url  127.0.0.1:8000
+
+tutorial 3 create first app (plus a rant about what is an app - here an app
+there an app   everywhere an app app
+
+ << initialize an app >>
+at ~/nbdjango/website
+sudo python manage.py startapp music
+ at ~/nbdjango/website  ls -alR music:
+.:
+total 24
+drwxr-xr-x 4 root     root     4096 Jan 17 23:15 .
+drwxrwxr-x 5 rchansen rchansen 4096 Jan 17 22:48 ..
+-rw-r--r-- 1 root     root     3072 Jan 17 22:53 db.sqlite3
+-rwxr-xr-x 1 root     root      805 Jan 17 22:29 manage.py
+drwxr-xr-x 3 root     root     4096 Jan 17 23:15 music
+drwxr-xr-x 2 root     root     4096 Jan 17 22:53 website
+
+./music:                                                 an app dir
+total 32
+drwxr-xr-x 3 root root 4096 Jan 17 23:15 .
+drwxr-xr-x 4 root root 4096 Jan 17 23:15 ..
+-rw-r--r-- 1 root root  128 Jan 17 23:15 admin.py  # app admin stuff
+-rw-r--r-- 1 root root  150 Jan 17 23:15 apps.py
+-rw-r--r-- 1 root root    0 Jan 17 23:15 __init__.py
+drwxr-xr-x 2 root root 4096 Jan 17 23:15 migrations # how hookups
+-rw-r--r-- 1 root root  122 Jan 17 23:15 models.py  # class blueprints
+-rw-r--r-- 1 root root  125 Jan 17 23:15 tests.py   # 
+-rw-r--r-- 1 root root  128 Jan 17 23:15 views.py   # py func that take
+    a request  and give back a page or respons
+
+./music/migrations:
+total 8
+drwxr-xr-x 2 root root 4096 Jan 17 23:15 .
+drwxr-xr-x 3 root root 4096 Jan 17 23:15 ..
+-rw-r--r-- 1 root root    0 Jan 17 23:15 __init__.py
+
+./website:
+total 36
+drwxr-xr-x 2 root root 4096 Jan 17 22:53 .
+drwxr-xr-x 4 root root 4096 Jan 17 23:15 ..
+-rw-r--r-- 1 root root    0 Jan 17 22:29 __init__.py
+-rw-r--r-- 1 root root  138 Jan 17 22:53 __init__.pyc
+-rw-r--r-- 1 root root 3100 Jan 17 22:29 settings.py
+-rw-r--r-- 1 root root 2570 Jan 17 22:53 settings.pyc
+-rw-r--r-- 1 root root  764 Jan 17 22:29 urls.py
+-rw-r--r-- 1 root root  982 Jan 17 22:53 urls.pyc
+-rw-r--r-- 1 root root  392 Jan 17 22:29 wsgi.py
+-rw-r--r-- 1 root root  596 Jan 17 22:53 wsgi.pyc
+
+** note the .pyc files generated ( likely by runserver  -- look at
+ time stamps on  /music ... files
+
+migrations - how to hook up apps
+admin      - admin function is the app dirv
+  
+create an app 
+structure
+  djrootdir                                             
+  |--projname      sudo python manage.py startapp music
+     |--.
+     |--..
+     |--manage.py
+     |--music
+     |  |--.
+     |  |--..
+     |  |--admin.py
+     |  |--apps.py
+     |	|--__init__,py
+     |	|--migrations
+     |	|  |--.
+     |	|  |--..
+     |	|  |--__init__.py
+     |  |
+     |	|--models.py
+     |	|--tests.py
+     |	|--views.ppy
+     |   
+     |--projname
+        |--.
+	|--..
+        |--__init__.py
+	|--settings.py
+	|--urls.py
+	|--wsg1.py
+
+---------------------------------------------------------
+tvtutor 5 views
+ need something for music in urls
+ but put it in  /music subdir  a urls.py
+
+
+
+tutorial 6 DB setup  --   website/website/db.slite3
+ default  see  settings   DATABASES
+  Note errors/warnings on  python manage.py runserver
+  fix migration errors/warnings   
+    python manage.py migrate
+
+tutorial 7 creating Models
+
+tutorial 8 activating Models
+ 1. make the change to the  models.py
+ 2. python manage.py makemigrations xxx
+ 3. python manage.py migrate
+
+tutorial 9  Database API
+:
+utor 6 db setup
+  sqlite  in settings default   project/websit/settings
+
+tutor 7 creating models
+  ablums and songs
+db by default is slqite type see settings
+
+sudo python manage.py makemigraions
+sudo python manage.py migrate  app
+
+sudo python manage.py
+
+
+sudo python manage.py shell
+  goes in to iron-python shell   ??
+
+  from  modles import  Album, Song
+
+  Album.objects.all()
+  fix the __str__  fnt   in ~/nbdjango/website.models
+
+
+tutor 11    first story about riding on plane with a fat guy
+
+* * * * * *  Here is where I started to also use git
+going to git init and then  git add .  pick up a picture of work
+at startof tutorial 11 on  new boston django
+

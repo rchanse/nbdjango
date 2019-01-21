@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# wrapper code - redirect to  ~/desired-dir/tf  passing parms
+
+desired_dir="nbdjango"      # <<< = change this:
+
+if [ ".$PWD" != ".$desired_dir" ]; then  # <<< CHANGE HERE 
+   $HOME/$desired_dir/tf $1 $2 $3
+   exit                  # really leave
+fi
+ # fall through replaces the else
+echo "Should never see" 
