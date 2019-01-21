@@ -52,6 +52,7 @@ app="music"
 
 # fnt  parm1 acro      file
  goedit $1   notes     ~/$level1/rchnotes
+ goedit $1   musicadmin ~/$level1/$project/$app/admin.py   sudo
  goedit $1   urls      ~/$level1/$project/website/urls.py  sudo
  goedit $1   musicurls ~/$level1/$project/$app/urls.py sudo
  goedit $1   musicviews ~/$level1/$project/$app/views.py sudo
