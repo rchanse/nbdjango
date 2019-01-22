@@ -223,3 +223,16 @@ starting with setting superuser
   djroot  Secret01
 
 tutor 11  more on views
+ music/views.py
+urlpatterns = [  usl(r'^$', views.index, name='index')
+]  
+ 
+ views.index in views(above)    works wit    def index  in url(below)
+
+ music/urls.py
+def index(request):
+    return HttpResponse("<h1>This is a list of albums.</h1>")
+----------------------------------------------------------------    
+end tutor 11
+
+
