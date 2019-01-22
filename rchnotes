@@ -242,4 +242,22 @@ tutor 13 connect to the Database
   jumble python and html together in  views/urs
  
 tutor 14 redo 13 but seperate the python and html out so it is
-easier to maintain.
+easier to maintain.  An intro to templates being used in django
+  from django.template import loader
+
+  more sructure
+  proj (dir)                website
+    app (dir)                 music
+      template (dir)            templates  (yes the word templates)
+        appname (dir)             music    
+  note  don't forget to sudo when   mkdir template/music
+
+in the loader.get_template('music/index.html')  "by django convention
+  app music is supposed to look in  music/template/music dir	
+
+  Building a sample template    music/template/music/index.html
+  python logic is  'surrounded  {% %} type stuff
+  in the  views.pi  not special words   context request (I don't know
+  if these are required or convention.
+ end 14
+
