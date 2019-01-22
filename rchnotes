@@ -235,4 +235,11 @@ def index(request):
 ----------------------------------------------------------------    
 end tutor 11
 
+tutor12  view and connect the db
 
+
+tutor 13 connect to the Database
+  jumble python and html together in  views/urs
+ 
+tutor 14 redo 13 but seperate the python and html out so it is
+easier to maintain.
