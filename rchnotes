@@ -261,3 +261,8 @@ in the loader.get_template('music/index.html')  "by django convention
   if these are required or convention.
  end 14
 
+ tutor 15  rendor template shortcut	
+   see   music/views.py  tut14 and new way
+   change in import   def index   and  use of rende
+ end tut15
+

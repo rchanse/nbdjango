@@ -1,16 +1,26 @@
 from __future__ import unicode_literals
 from django.http import HttpResponse
-from django.template import loader             # tut 14
+#from django.template import loader             # tut 14
+from django.shortcuts import render            #tut 14 short cut
 from .models import Album
 
+
 def index(request):
-    all_albums = Album.objects.all()     # connect to DB get data
-    template =  loader.get_template('music/index.html')
-    # pass var by a dict   std is call dix  context
-    context = {
-            'all_albums': all_albums,
-            }
-    return HttpResponse(template.render(context, request))
+    all_albums = Album.objects.all()
+    context = {'all_albums': all_albums}
+    return render(request, 'music/index.html', context)
+
+# tutor 14
+##def index(request):
+##    all_albums = Album.objects.all()     # connect to DB get data3
+##    template =  loader.get_template('music/index.html')
+##    # pass var by a dict   std is call dix  context
+##    context = {
+##            'all_albums': all_albums,
+##            }
+##    return HttpResponse(template.render(context, request))
+# end tutor 14
+
 # material below was in prev tut 12
 ##def index(request):
 ##    all_albums = Album.objects.all()     # connect to DB get data
