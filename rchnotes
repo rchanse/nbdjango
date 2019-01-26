@@ -295,4 +295,4 @@ tut 18  Related objects set
      so backing up in shell cuts down on typing
       
 tut 19 design the Details Template
-
+  change  templates/detail.html  
