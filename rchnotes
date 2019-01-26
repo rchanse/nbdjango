@@ -266,3 +266,6 @@ in the loader.get_template('music/index.html')  "by django convention
    change in import   def index   and  use of rende
  end tut15
 
+tut 16  sending an http 404  when some data is missing
+  sample of  try - execpt    and   DoesNotExist  error
+  also I tried  change DEBUG=False   ( had to set  ALLOWED_HOSTS=['*']
