@@ -296,3 +296,14 @@ tut 18  Related objects set
       
 tut 19 design the Details Template
   change  templates/detail.html  
+
+tut 20 remove hard coded URLs	
+ from  website/music/templates/music/index.html
+
+     <li><a href="/music/{{ album.id }}/">{{ album.album_title }}</a></li>
+                  ------- ----------
+		  hardcoded  dynamic
+		    
+  hardcoded is bad (inflexible)  hit is gosee  music/urls.py and note
+  the name  index and detail   show hot to make more flexible
+  by replacing the hardcode portion with info from urls.py  name= part

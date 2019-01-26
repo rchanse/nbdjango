@@ -8,6 +8,6 @@ urlpatterns = [
     # /music/
     url(r'^$', views.index, name='index'),
 #    url(r'^admin/$  ', admin.site.urls),
-    # /music/712/
-    url(r'^(?P<album_id>[0-9]+)/$', views.detail, name='detai'),
+    # /music/712/   /music/album_id/
+    url(r'^(?P<album_id>[0-9]+)/$', views.detail, name='detail'),
 ]

@@ -8,12 +8,12 @@
       <li><a href="#">Album Title Here</a></li>
      --> 
       {% for album in all_albums %}
-  <!--  was before tut 20    
       <li><a href="/music/{{ album.id }}/">{{ album.album_title }}</a></li>
-    -->   
-    <li><a href="{% url 'detail' album.id %}">{{ album.album_title }}</a></li>
       {% endfor %}
   </ul>
+
 {% else %}
+
   <h3>You have NO ablums in the list</he>
+ 
 {% endif %}
