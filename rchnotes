@@ -269,3 +269,20 @@ in the loader.get_template('music/index.html')  "by django convention
 tut 16  sending an http 404  when some data is missing
   sample of  try - execpt    and   DoesNotExist  error
   also I tried  change DEBUG=False   ( had to set  ALLOWED_HOSTS=['*']
+
+tut 17 add songs to db   change model  add __str__  and put Songs in admin
+ no need to do migrations  (add a class or change a class - like adding
+ a row (attribute) ) )  not when write a method
+ get some songs in by using   sudo python manage.py shell
+   imports needed first
+
+   from music.models import Album, Song
+   album1 = Album.objects.get(pk=1)
+   album1.artist
+   song = Song()                                 create instance
+   song.album = album1                             fill db item
+   song.file_type = 'mp3'                              same
+   song.song_title = 'I hate my boyfriend'             same
+   song.save()                                move from memorary to db-file
+   enter  song = Song()
+     song.album
