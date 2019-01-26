@@ -286,3 +286,13 @@ tut 17 add songs to db   change model  add __str__  and put Songs in admin
    song.save()                                move from memorary to db-file
    enter  song = Song()
      song.album
+
+tut 18  Related objects set
+ note stil in   python manage.py shell
+   album1.song_set.create=(title=' whatever ' ,file_type='mp3') 
+     upon hitting enter  db is updated no save needed  
+     the  song_set   is   Song (lower case) _set
+     so backing up in shell cuts down on typing
+      
+tut 19 design the Details Template
+
