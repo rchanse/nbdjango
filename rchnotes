@@ -307,3 +307,9 @@ tut 20 remove hard coded URLs
   hardcoded is bad (inflexible)  hit is gosee  music/urls.py and note
   the name  index and detail   show hot to make more flexible
   by replacing the hardcode portion with info from urls.py  name= part
+
+  tut 21 Namespace and Http404  shortcut
+     add app_name = 'music' in  music/urls.py
+     change   'detail'  to  'music.detail' in  w-/m-/t-/m-/index.html
+     note change to Http404 in  mu-/views.py
+     shortcut get_object_or_404 -  replace most   try-except code

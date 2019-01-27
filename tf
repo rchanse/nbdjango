@@ -57,8 +57,8 @@ app="music"
  goedit $1   musicurls ~/$level1/$project/$app/urls.py sudo
  goedit $1   musicviews ~/$level1/$project/$app/views.py sudo
  goedit $1   settings   ~/$level1/$project/website/settings.py sudo    
- goedit $1   musicmodels ~/$level1/$project/$app/models.py  sudo :    
-
+ goedit $1   musicmodels ~/$level1/$project/$app/models.py  sudo     
+ goedit $1  index  ~/$level1/$project/$app/templates/$app/index.html  sudo
 
 if [ ".." != ".$1" ]; then 
     echo " >$1< as acronyn not found."
